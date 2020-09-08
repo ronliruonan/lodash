@@ -2,6 +2,7 @@ import ListCache from './ListCache.js'
 import MapCache from './MapCache.js'
 
 /** Used as the size to enable large array optimizations. */
+// 用于开启大数据优化
 const LARGE_ARRAY_SIZE = 200
 
 class Stack {

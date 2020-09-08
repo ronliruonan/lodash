@@ -10,7 +10,7 @@ function copyArray(source, array) {
   let index = -1
   const length = source.length
 
-  array || (array = new Array(length))
+  array || (array = new Array(length)) // 为Array指定空间大小
   while (++index < length) {
     array[index] = source[index]
   }

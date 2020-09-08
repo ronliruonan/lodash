@@ -1,9 +1,13 @@
 import Stack from './Stack.js'
 import arrayEach from './arrayEach.js'
 import assignValue from './assignValue.js'
+// to do
 import cloneBuffer from './cloneBuffer.js'
+// done，为Array指定空间大小
 import copyArray from './copyArray.js'
+// done, 
 import copyObject from './copyObject.js'
+// to do
 import cloneArrayBuffer from './cloneArrayBuffer.js'
 import cloneDataView from './cloneDataView.js'
 import cloneRegExp from './cloneRegExp.js'
@@ -11,6 +15,7 @@ import cloneSymbol from './cloneSymbol.js'
 import cloneTypedArray from './cloneTypedArray.js'
 import copySymbols from './copySymbols.js'
 import copySymbolsIn from './copySymbolsIn.js'
+//
 import getAllKeys from './getAllKeys.js'
 import getAllKeysIn from './getAllKeysIn.js'
 import getTag from './getTag.js'
@@ -139,8 +144,9 @@ function initCloneArray(array) {
 }
 
 /**
- * The base implementation of `clone` and `cloneDeep` which tracks
- * traversed objects.
+ * The base implementation/实现 of `clone` and `cloneDeep` which tracks/跟踪
+ * traversed/穿过/遍历 objects.
+ * `clone`和`cloneDeep`的基本实现
  *
  * @private
  * @param {*} value The value to clone.
@@ -151,7 +157,7 @@ function initCloneArray(array) {
  * @param {Function} [customizer] The function to customize cloning.
  * @param {string} [key] The key of `value`.
  * @param {Object} [object] The parent object of `value`.
- * @param {Object} [stack] Tracks traversed objects and their clone counterparts.
+ * @param {Object} [stack] Tracks traversed objects and their clone counterparts/副本.
  * @returns {*} Returns the cloned value.
  */
 function baseClone(value, bitmask, customizer, key, object, stack) {
@@ -197,6 +203,7 @@ function baseClone(value, bitmask, customizer, key, object, stack) {
     }
   }
   // Check for circular references and return its corresponding clone.
+  // 检查‘循环引用’ 且 返回其相应的克隆
   stack || (stack = new Stack)
   const stacked = stack.get(value)
   if (stacked) {

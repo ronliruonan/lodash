@@ -1,6 +1,7 @@
 import baseClone from './.internal/baseClone.js'
 
 /** Used to compose bitmasks for cloning. */
+// 用于构成clone的位掩码？？
 const CLONE_SYMBOLS_FLAG = 4
 
 /**

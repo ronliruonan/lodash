@@ -1,4 +1,5 @@
 /** Used to stand-in for `undefined` hash values. */
+// 用于支持“未定义”的哈希值
 const HASH_UNDEFINED = '__lodash_hash_undefined__'
 
 class Hash {

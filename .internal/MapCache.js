@@ -18,6 +18,7 @@ function getMapData({ __data__ }, key) {
 
 /**
  * Checks if `value` is suitable for use as unique object key.
+ * 检查`value`是不是适用于唯一对象的键
  *
  * @private
  * @param {*} value The value to check.
